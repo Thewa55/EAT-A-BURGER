@@ -4,6 +4,7 @@ var burger = require("../models/burgerModels.js")
 
 router.get("/", (req, res) => {
   burger.all(burgerData =>{
+      console.table(burgerData)
       var objForHbs = {
         burgers: burgerData
       }

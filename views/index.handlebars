@@ -1,10 +1,10 @@
 <h1>Welcome to Eat-Da-Burger!</h1>
 
-<h2>EAT ME!!!</h2>
+<h2>Eat ME!!!</h2>
 <ul>
   {{#each burgers}}
     {{#unless eat}}
-      {{> burgers/burgers-block eat=false}}
+     {{> burger/burgers-block eat=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,7 +13,7 @@
 <ul>
   {{#each burgers}}
     {{#if eat}}
-     {{> burger/burgers-block eat=true}}
+      {{> burgers/burgers-block eat=true}}
     {{/if}}
   {{/each}}
 </ul>

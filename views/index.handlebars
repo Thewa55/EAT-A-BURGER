@@ -1,33 +1,38 @@
 <div class="container-fluid mt-4">
   <div class="row">
-    <div class="col-3 text-left">
+
+    <div class="col-3 list-container text-left">
       <h2>Eat ME!!!</h2>
-      <ul>
+      <div class="card">
+      <ul class="list-group">
         {{#each burgers}}
           {{#unless hungry}}
             {{> burger/burgers-block eat=true}}
           {{/unless}}
         {{/each}}
       </ul>
+      </div>
     </div>
     <div class="col-6 text-center">
       <form class="create-form">
         <div class="form-group">
-          <label for="burg">Burger</label>
-          <input type="text" id="burg" name="burger_name">
+          <label for="burg"> What burger would your like?</label>
+          <input type="text" class="form-control" id="burg" name="burger_name">
         </div>
-        <button type="submit">Add Burger</button>
+        <button type="submit" class="btn btn-success">Add Burger</button>
       </form>
     </div>
-    <div class="col-3 text-right">
+    <div class="col-3  text-right list-container">
       <h2>Eaten :(</h2>
-      <ul class="eatan">
-        {{#each burgers}}
-          {{#if hungry}}
-            {{> burger/burgers-block eat=false}}
-          {{/if}}
-        {{/each}}
-      </ul>
+      <div class="card">
+        <ul class="list-group">
+          {{#each burgers}}
+            {{#if hungry}}
+              {{> burger/burgers-block eat=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
   </div>
 </div>

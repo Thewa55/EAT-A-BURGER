@@ -38,12 +38,6 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
         buttons[i].style.display = "none"
       }
     }
-    // console.log(buttons.innerText)
-      // console.log(button.data("neweat"))
-      // if($(this).data("neweat" === false)){
-      //   console.log($(this).data("neweat"))
-      // }
-    // })
   }
 
   buttonRender()

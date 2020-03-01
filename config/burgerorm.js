@@ -25,7 +25,6 @@ function objToSql(ob) {
 var orm = {
 
   all:(table, cb) => {
-    console.log(table)
     connection.query("SELECT * FROM " + table + ";", (err,res)=>{
       if(err) throw err
       cb(res)
@@ -43,7 +42,6 @@ var orm = {
   },
 
   update:(table, col, condition, cb) => {
-    console.log("This is the col in update ", col)
     var querystring = "UPDATE " +table+ " SET " + objToSql(col)+ " WHERE " +condition+";"
     connection.query(querystring, condition, (err, result) =>{
       if (err) throw err;

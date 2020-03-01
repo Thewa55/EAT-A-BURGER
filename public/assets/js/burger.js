@@ -38,6 +38,16 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
         buttons[i].style.display = "none"
       }
     }
+
+    let deletebtn = document.querySelectorAll(".delete-eat")
+    for(let i=0; i < deletebtn.length; i++){
+      if(deletebtn[i].dataset.neweat === "true"){
+        deletebtn[i].style.display = "none"
+      }
+      else{
+        deletebtn[i].style.display = "inline"
+      }
+    }
   }
 
   buttonRender()

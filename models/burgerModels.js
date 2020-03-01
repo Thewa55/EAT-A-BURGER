@@ -14,7 +14,11 @@ var burger = {
     })
   },
 
-
+  update:(objValCols, condition, cb) =>{
+    orm.update("burgers", objValCols, condition, (res) =>{
+      cb(res)
+    })
+  }
 }
 
 module.exports = burger

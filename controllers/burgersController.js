@@ -17,8 +17,11 @@ router.post("/api/burgers",(req,res)=>{
   })
 })
 
-router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-  console.log("condition", condition);
+router.put("/api/burgers/:id", (req,res)=>{
+  var condition = "id = " +req.params.id;
+  console.log("condition ", condition);
+  burger.update({eaten: req.body.eaten}, condition, (result)=> {
+    
+  })
 })
 module.exports = router

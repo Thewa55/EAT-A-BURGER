@@ -21,11 +21,10 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
     var newEatState = {
       eaten: eatenState
     }
-
-    $.ajax("/api/burgers/" + id, {
-        type: "PUT",
-        data: newEatState
-      }).then(
+    $.ajax("/api/burgers/" + id,{
+      type: "PUT",
+      data: newEatState
+    }).then(
         function(){
 
     })

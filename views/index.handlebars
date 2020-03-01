@@ -1,8 +1,7 @@
 <div class="container-fluid mt-4">
   <div class="row">
-
     <div class="col-3 list-container text-left">
-      <h2>Eat ME!!!</h2>
+      <h2 class="cardtitle">Eat ME!!!</h2>
       <div class="card">
       <ul class="list-group">
         {{#each burgers}}
@@ -13,17 +12,17 @@
       </ul>
       </div>
     </div>
-    <div class="col-6 text-center">
+    <div class="col-6 text-center mt-5">
       <form class="create-form">
         <div class="form-group">
-          <label for="burg"> What burger would your like?</label>
+          <label class="burgmsg" for="burg"> What burger would you like?</label>
           <input type="text" class="form-control" id="burg" name="burger_name">
         </div>
         <button type="submit" class="btn btn-success">Add Burger</button>
       </form>
     </div>
     <div class="col-3  text-right list-container">
-      <h2>Eaten :(</h2>
+      <h2 class="cardtitle">Eaten :(</h2>
       <div class="card">
         <ul class="list-group">
           {{#each burgers}}

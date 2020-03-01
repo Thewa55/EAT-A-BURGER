@@ -1,3 +1,16 @@
-.eaten button{
-    display: none;
+body{
+  background-image: url(../images/burger2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcomemsg,
+.burgmsg,
+.cardtitle{
+  font-family: Lobster;
+  color: white;
+}
+
+.burgmsg{
+  font-size: x-large;
 }

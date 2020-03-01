@@ -26,7 +26,7 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
       data: newEatState
     }).then(
         function(){
-
+        
     })
   })
 })

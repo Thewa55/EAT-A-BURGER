@@ -8,7 +8,7 @@
       <h2>Eat ME!!!</h2>
       <ul>
         {{#each burgers}}
-          {{#unless eat}}
+          {{#unless hungry}}
             {{> burger/burgers-block eat=true}}
           {{/unless}}
         {{/each}}
@@ -27,8 +27,8 @@
       <h2>Eaten :(</h2>
       <ul>
         {{#each burgers}}
-          {{#if eat}}
-            {{> burgers/burgers-block eat=false}}
+          {{#if hungry}}
+            {{> burger/burgers-block eat=false}}
           {{/if}}
         {{/each}}
       </ul>

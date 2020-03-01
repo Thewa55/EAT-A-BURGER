@@ -19,14 +19,14 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
     var eatenState = $(this).data("neweat")
     console.log("This is the eatenstate: " + eatenState)
     var newEatState = {
-      eaten: eatenState
+      hungry: eatenState
     }
     $.ajax("/api/burgers/" + id,{
       type: "PUT",
       data: newEatState
     }).then(
         function(){
-        
+        location.reload();
     })
   })
 })

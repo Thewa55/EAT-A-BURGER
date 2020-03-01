@@ -1,6 +1,6 @@
 <li class='list-group-item'>
-	{{burger_name}}
-
+  {{burger_name}}
+	<div>
 	<button type="button" class="btn btn-dark change-eat" data-id="{{id}}" data-neweat="{{eat}}">
 		{{#if eat}}EAT IT {{else}} N/A {{/if}}
 	</button>
@@ -8,4 +8,5 @@
 	<button type="button" class="btn btn-danger delete-eat" data-id="{{id}}" data-neweat="{{eat}}">
 		{{#if eat}} N/A {{else}} TRASH IT {{/if}}
 	</button>
+	</div>
 </li>

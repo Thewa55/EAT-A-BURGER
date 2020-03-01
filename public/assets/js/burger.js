@@ -31,6 +31,11 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
     })
   })
 
+  $(".delete-eat").on("click", function(event){
+    var id = $(this).data("id");
+    console.log(id)
+  })
+
   let buttonRender = ()=>{
     let buttons = document.querySelectorAll(".change-eat")
     for(let i=0; i < buttons.length; i++){

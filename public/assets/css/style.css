@@ -14,3 +14,7 @@ body{
 .burgmsg{
   font-size: x-large;
 }
+
+.list-group-item{
+  font-size: large;
+}

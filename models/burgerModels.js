@@ -6,7 +6,15 @@ var burger = {
     orm.all("burgers", (results) => {
       cb(results)
     })    
-  }
+  },
+
+  create:(cols, vals, cb) =>{
+    orm.create("burgers", cols, vals, (res)=>{
+      cb(res)
+    })
+  },
+
+  
 }
 
 module.exports = burger

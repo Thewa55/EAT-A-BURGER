@@ -3,16 +3,15 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
   $(".create-form").on("submit", (event)=>{
     event.preventDefault();
     var newBurger = {
-      burger_name: $("ca").val().trim()
+      burger_name: $("#burg").val().trim()
     };
 
     $.ajax("/api/burgers",{
       type: "POST",
-      data: newBurger,  
+      data: newBurger  
     }).then(() =>{
       location.reload();
     })
   })
-
 
 })

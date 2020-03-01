@@ -4,7 +4,6 @@ var burger = require("../models/burgerModels.js")
 
 router.get("/", (req, res) => {
   burger.all(burgerData =>{
-      console.table(burgerData)
       var objForHbs = {
         burgers: burgerData
       }
@@ -12,11 +11,11 @@ router.get("/", (req, res) => {
   })
 })
 
-router.post("api/burgers",(req,res)=>
-  burger.create("burger_name", req.body.burger_name, (results) =>{
-    res.json({ id: result.insertId})
+router.post("/api/burgers",(req,res)=>{
+  burger.create(["burger_name"], [req.body.burger_name], (results) =>{
+    res.json({ id: results.insertId})
   })
-)
+})
 
 
 module.exports = router

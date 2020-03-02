@@ -47,6 +47,14 @@ var orm = {
       if (err) throw err;
       cb(result);
     })
+  },
+
+  delete:(table, vals, cb) => {
+    var querystring = "DELETE FROM "+table+ " WHERE "+vals+";";
+    connection.query(querystring, (err, result)=>{
+      if(err) throw err
+      cb(result);
+    })
   }
 }
 

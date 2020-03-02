@@ -18,7 +18,6 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
     var id = $(this).data("id");
     var eatenState = $(this).data("neweat")
     $(this).attr("display", "none")
-    console.log("This is the eatenstate: " + eatenState)
     var newEatState = {
       hungry: eatenState
     }
@@ -34,6 +33,11 @@ $(function(){ //I don't think I need this since my js link is at the bottom but 
   $(".delete-eat").on("click", function(event){
     var id = $(this).data("id");
     console.log(id)
+    $.ajax("api/burgers/" + id, {
+      type: "DELETE"
+    }).then(()=>{
+      location.reload()
+    })
   })
 
   let buttonRender = ()=>{
